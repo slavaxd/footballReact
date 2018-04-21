@@ -42,7 +42,7 @@ class Team extends Component {
 		let matchID = match["_links"].self.href.split("/").pop();
 		return (
 			<li>
-				<Link to={`/match/${matchID}`}>
+				<Link to={`/predict/${matchID}`}>
 					<div> vs {this.state.data.name === match.awayTeamName ? match.homeTeamName : match.awayTeamName} </div>
 				</Link>
 			</li>

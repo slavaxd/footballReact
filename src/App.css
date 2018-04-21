@@ -26,3 +26,37 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.App a{
+  text-decoration: none;
+  color: black;
+}
+.App a:visited{
+  color: #656565;
+}
+.App a:hover{
+  color: blue;
+  text-decoration: underline;
+}
+
+.App table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin-left:190px;
+    width: 70%;
+}
+.App table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+.App table td:first-child{
+  width: 10%;
+}
+.App table td, th{
+  width: 45%;
+}
+
+.App table tr:nth-child(odd) {
+    background-color: #dddddd;
+}

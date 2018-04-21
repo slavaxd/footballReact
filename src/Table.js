@@ -33,21 +33,32 @@ class Table extends Component {
 					<h1>EPL</h1>
 				</div>
 
-				<ol className="grid-item content">
-					{teams.map((team, index) => {
-						let teamID = team["_links"].team.href.split("/").pop();
-						return (
-							<Link to={`/team/${teamID}`}>
-								<div key={index}>{team.position}. {team.teamName} {team.points} points</div>
-							</Link>
-						)
-					})}
+				{/*<ol className="grid-item content">*/}
+					<table>
+						<tr>
+							<th>Position</th>
+							<th>Team</th>
+							<th>Points</th>
+						</tr>
+						{teams.map((team, index) => {
+							let teamID = team["_links"].team.href.split("/").pop();
+							return (
+								<tr>
+									<Link to={`/team/${teamID}`} key={index}>
+										<td>{team.position}</td>
+										<td>{team.teamName}</td>
+										<td>{team.points}</td>
+									</Link>
+								</tr>
+							)
+						})}
+					</table>
 {/*					<li class="grid-item">
 					   <a href="#">Тотенхем</a>
 						 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 					</li>*/}
 
-				</ol>
+				{/*</ol>*/}
 			</div>
 		)
 		
