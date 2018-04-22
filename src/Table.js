@@ -28,8 +28,8 @@ class Table extends Component {
 		let teams = this.state.teams;
 		let url = this.props.url;
 		return (
-			<div className="grid-container">
-				<div className="grid-item header">
+			<div >
+				<div >
 					<h1>EPL</h1>
 				</div>
 
