@@ -41,11 +41,11 @@ class Team extends Component {
 	generateMatches(match) {
 		let matchID = match["_links"].self.href.split("/").pop();
 		return (
-			<li>
+			<div class="flex-item"> 
 				<Link to={`/predict/${matchID}`}>
-					<div> vs {this.state.data.name === match.awayTeamName ? match.homeTeamName : match.awayTeamName} </div>
+					<div > <span class="vs">vs</span> {this.state.data.name === match.awayTeamName ? match.homeTeamName : match.awayTeamName} </div>
 				</Link>
-			</li>
+			</div>
 		)
 	}
 	render() {
@@ -53,11 +53,17 @@ class Team extends Component {
 		let url = this.props.url;
 
 		return (
-			<div className="grid-container">
-				<h1>{this.state.data.name}</h1>
-				<ol>
-					{this.state.fixtures.map(this.generateMatches)}
-				</ol>
+			<div className="flex-container">
+				<h1>{this.state.data.name} <span class="vs">VS</span></h1>
+				
+				
+				
+					
+							{this.state.fixtures.map(this.generateMatches)}
+						
+					
+				
+				
 				Fixtures length: {this.state.fixtures.length}
 
 			</div>

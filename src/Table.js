@@ -33,25 +33,25 @@ class Table extends Component {
 					<h1>EPL</h1>
 				</div>
 
+				<div class="heading">
+					<td>Position</td>
+					<td>Team</td>
+					<td>Points</td>
+				</div>
 				{/*<ol className="grid-item content">*/}
 					<table>
-						<tr>
-							<th>Position</th>
-							<th>Team</th>
-							<th>Points</th>
-						</tr>
-						{teams.map((team, index) => {
-							let teamID = team["_links"].team.href.split("/").pop();
-							return (
-								<tr>
-									<Link to={`/team/${teamID}`} key={index}>
-										<td>{team.position}</td>
-										<td>{team.teamName}</td>
-										<td>{team.points}</td>
-									</Link>
-								</tr>
-							)
-						})}
+							{teams.map((team, index) => {
+								let teamID = team["_links"].team.href.split("/").pop();
+								return (
+									<tr>
+										<Link to={`/team/${teamID}`} key={index}>
+											<td>{team.position}</td>
+											<td>{team.teamName}</td>
+											<td>{team.points}</td>
+										</Link>
+									</tr>
+								)
+							})}	
 					</table>
 {/*					<li class="grid-item">
 					   <a href="#">Тотенхем</a>
