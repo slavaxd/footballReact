@@ -32,7 +32,7 @@
   color: black;
 }
 .App a:visited{
-  color: #656565;
+  color: black;
 }
 .App a:hover{
   color: blue;
@@ -81,4 +81,13 @@
 
 .App .flex-item:nth-child(even) {
     background-color: #dddddd;
+}
+
+/* predict */
+
+.App .grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 25px;
+  justify-items: center;
 }
