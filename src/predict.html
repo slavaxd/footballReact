@@ -6,28 +6,35 @@
 	<style>
 		.grid-container{
 		  display: grid;
-		  grid-template-columns: 1fr 1fr;
-		  grid-column-gap: 25px;
+		  grid-template-columns: 1fr 10px 1fr;
+		  grid-template-rows: 100px 200px;
+		  /* grid-column-gap: 25px; */
 		  justify-items: center;
 		}
 		.grid-item{
 		  
 		}
+		.two{
+		  grid-column-start: 3;
+		}
+		.three{
+		  grid-column-start: 2;
+		}
 	</style>
 </head>
 <body>
 <h1>Прогноз на матч</h1>
-	<div class="grid-container">
-
-		<div class="grid-item">
-			<img src="" alt="img">
-			<h2>Тотенхем</h2>
-		</div>
-		<div class="grid-item">
-			<img src="" alt="img">
-			<h2>Ливерпуль</h2>
-		</div>
+<div class="grid-container">
+	<div class="grid-item one">
+		<img src="" alt="img">
+		<h2>Тотенхем</h2>
 	</div>
+	<div class="grid-item two">
+		<img src="" alt="img">
+		<h2>Ливерпуль</h2>
+	</div>
+	<div class="grid-item three"><h1>7:0</h1></div>
+</div>
 
 
 </body>

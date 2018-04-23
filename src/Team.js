@@ -41,9 +41,9 @@ class Team extends Component {
 	generateMatches(match) {
 		let matchID = match["_links"].self.href.split("/").pop();
 		return (
-			<div class="flex-item"> 
+			<div className="flex-item"> 
 				<Link to={`/predict/${matchID}`}>
-					<div > <span class="vs">vs</span> {this.state.data.name === match.awayTeamName ? match.homeTeamName : match.awayTeamName} </div>
+					<div > <span className="vs">vs</span> {this.state.data.name === match.awayTeamName ? match.homeTeamName : match.awayTeamName} </div>
 				</Link>
 			</div>
 		)
@@ -54,16 +54,10 @@ class Team extends Component {
 
 		return (
 			<div className="flex-container">
-				<h1>{this.state.data.name} <span class="vs">VS</span></h1>
-				
-				
-				
-					
+				<h1>{this.state.data.name} <span className="vs">VS</span></h1>
+	
 							{this.state.fixtures.map(this.generateMatches)}
-						
-					
-				
-				
+			
 				Fixtures length: {this.state.fixtures.length}
 
 			</div>

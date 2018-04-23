@@ -87,7 +87,13 @@
 
 .App .grid-container{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 25px;
+  grid-template-columns: 1fr 10px 1fr;
+  grid-template-rows: 100px 200px;
   justify-items: center;
+}
+.App .two{
+  grid-column-start: 3;
+}
+.App .three{
+  grid-column-start: 2;
 }

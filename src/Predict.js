@@ -120,15 +120,28 @@ class Predict extends Component {
 		console.log(typeof avgHomeGoals);
 
 		const result = (
-			<div className="grid-container">
-				{/*<h1>{this.state.data.name}</h1>
-				<ol>
-					{this.state.fixtures.map(this.generateMatches)}
-				</ol>
-				Fixtures length: {this.state.fixtures.length}*/}
-				// {typeof avgHomeGoals !== 'undefined' ? (<h1>home team coef: avgHomeGoals</h1>) : null}
-				<h1>home team coef: {this.state.homeTeam.avgHomeGoals}</h1>
-			</div>
+				<div>
+					<h1>Прогноз на матч</h1>
+
+					<div className="grid-container">
+						<div class="grid-item one">
+							<img src="" alt="img" />
+							<h2>Spurs</h2>
+						</div>
+						<div class="grid-item two">
+							<img src="" alt="img" />
+							<h2>Ливерпуль</h2>
+						</div>
+						<div class="grid-item three"><h1>7:0</h1></div>
+					</div>
+					{/*<h1>{this.state.data.name}</h1>
+					<ol>
+						{this.state.fixtures.map(this.generateMatches)}
+					</ol>
+					Fixtures length: {this.state.fixtures.length}
+					// {typeof avgHomeGoals !== 'undefined' ? (<h1>home team coef: avgHomeGoals</h1>) : null}
+					<h1>home team coef: {this.state.homeTeam.avgHomeGoals}</h1>*/}
+				</div>
 		);
 
 		return result;
