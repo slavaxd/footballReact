@@ -54,6 +54,7 @@ class Team extends Component {
 
 		return (
 			<div className="flex-container">
+				<img src={this.state.data.crestUrl} height="300" />
 				<h1>{this.state.data.name} <span className="vs">VS</span></h1>
 	
 							{this.state.fixtures.map(this.generateMatches)}

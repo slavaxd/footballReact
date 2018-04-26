@@ -16,10 +16,10 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <header className="App-header">
+          {/*<header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title"><a href="/">Welcome to React</a></h1>
-          </header>
+          </header>*/}
           {/*<Table />*/}
           <Route exact path="/" component={Table}/>
           <Route path="/team/:teamID" component={Team}/>

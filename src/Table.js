@@ -30,7 +30,8 @@ class Table extends Component {
 		return (
 			<div >
 				<div >
-					<h1>EPL</h1>
+					<img src="http://www.freelogovectors.net/wp-content/uploads/2012/08/epl-premier-league-logo.png" height="300" />
+					<h1>English Premier League </h1>
 				</div>
 
 				<div class="heading">
