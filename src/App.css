@@ -1,15 +1,14 @@
 .App {
   text-align: center;
 }
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #3C185A;
+  height: 20px;
   padding: 20px;
   color: white;
 }
@@ -26,6 +25,10 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+/* TABLE */
+.App .table{
+  margin-bottom: 30px;
+}
 
 .App a{
   text-decoration: none;
@@ -35,8 +38,7 @@
   color: black;
 }
 .App a:hover{
-  color: blue;
-  text-decoration: underline;
+  font-size: 1.1em;
 }
 
 .App table {
@@ -53,17 +55,21 @@
     padding: 8px;
     width: 450px;
 }
+.App table tr:nth-child(even) {
+    background-color: #8736CA;
+}
 .App table tr:nth-child(odd) {
-    background-color: #dddddd;
+    /* background-color: #6DF300; */
 }
 .App .heading{
   margin-left:150px;
+  background-color: #8736CA;
 }
 
 
 /*  */
-.App .vs{
-  color: green;
+.App .vs:nth-child(1){
+  color: red;
 }
 .App .flex-container{
   display: flex;
@@ -80,20 +86,61 @@
 }
 
 .App .flex-item:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #8736CA;
+}
+.App .flex-item:nth-child(odd) {
+   /*  background-color: #6DF300; */
 }
 
 /* predict */
 
 .App .grid-container{
   display: grid;
-  grid-template-columns: 1fr 10px 1fr;
-  grid-template-rows: 100px 200px;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 100px 370px;
   justify-items: center;
+  align-items: center;
+
+  grid-template-areas: 
+    "one two three"
+    "four five six";
+}
+.App .one, .two, .three{
+  font-size: 2em;
+  font-family: fantasy;
+}
+.App .one{
+  font-size: 3em;
+  color: green;
+  
+  grid-area: one;
 }
 .App .two{
-  grid-column-start: 3;
+ grid-area: two;
 }
 .App .three{
-  grid-column-start: 2;
+  font-size: 3em;
+  color: red;
+
+  grid-area: three;
+}
+.App .four{
+grid-area: four;
+}
+.App .five{
+  border:2px solid #8736CA;
+  color: black;
+
+  grid-area: five;
+}
+.App .six{
+  grid-area: six;
+}
+
+
+.win{
+  background-color: red; 
+}
+.lose{
+  background-color: green; 
 }

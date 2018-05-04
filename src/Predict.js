@@ -175,25 +175,30 @@ class Predict extends Component {
 		})
 		let avgAwayGoals = (goalsDiffInAwayMatches / awayMatches).toFixed(2);
 
-		let benefit = avgHomeGoals > avgAwayGoals ? <span> {this.state.homeTeam.name} will have benefit {(avgHomeGoals - avgAwayGoals).toFixed(2)} goals</span> : <span > {this.state.awayTeam.name} will have benefit {(avgAwayGoals - avgHomeGoals).toFixed(2)}</span>
+		let benefit = avgHomeGoals > avgAwayGoals ? <span> {this.state.homeTeam.name} will win. Benefit: {(avgHomeGoals - avgAwayGoals).toFixed(2)} goals</span> : <span > {this.state.awayTeam.name} will win. Benefit: {(avgAwayGoals - avgHomeGoals).toFixed(2)}</span>
 		const result = (
 				<div>
-					<h1>Прогноз на матч</h1>
+					
 
 					<div className="grid-container">
-						<div className="grid-item one">
+						<div className="grid-item one">Поразка (вдома)</div>
+						<div className="grid-item two">Прогноз на матч</div>
+						<div className="grid-item three">Перемога (в гостях)</div> 
+						
+						<div className="grid-item four win">
 							<img src={this.state.homeTeam.img} alt="img" height="300" />
 							<h2>{this.state.homeTeam.name}</h2>
 						</div>
-						<div className="grid-item two">
-							<img src={this.state.awayTeam.img} alt="img" height="300" />
-							<h2>{this.state.awayTeam.name}</h2>
-						</div>
-						<div className="grid-item three">
+						<div className="grid-item five">
+							<h1>COFs</h1>
 							<h1>{avgHomeGoals}:{avgAwayGoals}</h1>
 							<h1 className="">{benefit}</h1>	
 						</div>
-								
+						<div className="grid-item six lose">
+							<img src={this.state.awayTeam.img} alt="img" height="300" />
+							<h2>{this.state.awayTeam.name}</h2>
+						</div>
+						
 					</div>
 					{/*{typeof avgHomeGoals !== 'undefined' ? (<h1>home team coef: avgHomeGoals</h1>) : null}
 					<h1>home team coef: {avgHomeGoals}</h1>

@@ -40,7 +40,7 @@ class Table extends Component {
 					<td>Points</td>
 				</div>
 				{/*<ol className="grid-item content">*/}
-					<table>
+					<table class="table">
 							{teams.map((team, index) => {
 								let teamID = team["_links"].team.href.split("/").pop();
 								return (
