@@ -7,7 +7,7 @@
 }
 
 .App-header {
-  background-color: #3C185A;
+  background-color: #3c185a;
   height: 20px;
   padding: 20px;
   color: white;
@@ -22,125 +22,129 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 /* TABLE */
-.App .table{
+.App .table {
   margin-bottom: 30px;
 }
 
-.App a{
+.App a {
   text-decoration: none;
   color: black;
 }
-.App a:visited{
+.App a:visited {
   color: black;
 }
-.App a:hover{
+.App a:hover {
   font-size: 1.1em;
 }
 
 .App table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    margin-left:150px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin-left: 150px;
 }
-.App td:first-child{
+.App td:first-child {
   width: 100px;
 }
-.App td{
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-    width: 450px;
+.App td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 450px;
 }
 .App table tr:nth-child(even) {
-    background-color: #8736CA;
+  background-color: #8736ca;
 }
 .App table tr:nth-child(odd) {
-    /* background-color: #6DF300; */
+  /* background-color: #6DF300; */
 }
-.App .heading{
-  margin-left:150px;
-  background-color: #8736CA;
+.App .heading {
+  margin-left: 150px;
+  background-color: #8736ca;
 }
-
 
 /*  */
-.App .vs:nth-child(1){
+.App .vs:nth-child(1) {
   color: red;
 }
-.App .flex-container{
+.App .flex-container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
 }
-.App .flex-item{
-  padding-top:10px;
+.App .flex-item {
+  padding-top: 10px;
   width: 300px;
-  height:30px;
+  height: 30px;
   border: 1px solid grey;
 }
 
 .App .flex-item:nth-child(even) {
-    background-color: #8736CA;
+  background-color: #8736ca;
 }
 .App .flex-item:nth-child(odd) {
-   /*  background-color: #6DF300; */
+  /*  background-color: #6DF300; */
 }
 
 /* predict */
 
-.App .grid-container{
+.App .grid-container {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   grid-template-rows: 100px 370px;
   justify-items: center;
   align-items: center;
 
-  grid-template-areas: 
+  grid-template-areas:
     "one two three"
     "four five six";
 }
-.App .one, .two, .three{
+.App .one,
+.two,
+.three {
   font-size: 2em;
   font-family: fantasy;
 }
-.App .one{
+.App .one {
   font-size: 3em;
   color: green;
-  
+
   grid-area: one;
 }
-.App .two{
- grid-area: two;
+.App .two {
+  grid-area: two;
 }
-.App .three{
+.App .three {
   font-size: 3em;
   color: red;
 
   grid-area: three;
 }
-.App .four{
-grid-area: four;
+.App .four {
+  grid-area: four;
 }
-.App .five{
-  border:2px solid #8736CA;
+.App .five {
+  border: 2px solid #8736ca;
   color: black;
 
   grid-area: five;
 }
-.App .six{
+.App .six {
   grid-area: six;
 }
 
-
-.win{
-  background-color: red; 
+.win {
+  background-color: red;
 }
-.lose{
-  background-color: green; 
+.lose {
+  background-color: green;
 }
