@@ -31,63 +31,63 @@ class Predict extends Component {
     componentWillMount() {
         axios.defaults.headers.common['X-Auth-Token'] = 'b408c5c69ade430f8958d8b56b89c786';
 
-        axios.get(`http://api.football-data.org/v1/fixtures/${this.state.predictID}`) // MATCH DETAILS
+        axios.get(`http://api.football-data.org/v2/matches/${this.state.predictID}`) // MATCH DETAILS
             .then((response) => {
-                // console.log(JSON.parse(response.request.responseText));
+                console.log(JSON.parse(response.request.responseText));
                 let data = JSON.parse(response.request.responseText);
-                let links = data.fixture["_links"];
+                // let links = data.fixture["_links"];
                 this.setState({
-                    links: {
-                        homeTeam: links.homeTeam.href,
-                        awayTeam: links.awayTeam.href
-                    },
+                    // links: {
+                        // homeTeam: links.homeTeam.href,
+                        // awayTeam: links.awayTeam.href
+                //     },
                     homeTeam: {
-                        name: data.fixture.homeTeamName
+                        name: data.match.homeTeam.name
                     },
                     awayTeam: {
-                        name: data.fixture.awayTeamName
+                        name: data.match.awayTeam.name
                     }
-                });
-                return axios.get(`${links.homeTeam.href}/fixtures`);
-            })
-            .then((response) => {
-                let fixtures = JSON.parse(response.request.responseText).fixtures;
-                // console.log(fixtures);
-                let newHomeTeam = this.state.homeTeam;
-                newHomeTeam.fixtures = fixtures;
-                this.setState({
-                    homeTeam: newHomeTeam
-                });
-                return axios.get(`${this.state.links.awayTeam}/fixtures`);
-            })
-            .then((response) => {
-                let fixtures = JSON.parse(response.request.responseText).fixtures;
-                let newAwayTeam = this.state.awayTeam;
-                newAwayTeam.fixtures = fixtures;
-                this.setState({
-                    awayTeam: newAwayTeam
-                });
-                return axios.get(`${this.state.links.awayTeam}/`);
-            })
-            .then((response) => {
-                let data = JSON.parse(response.request.responseText);
-                let newAwayTeam = this.state.awayTeam;
-                newAwayTeam.name = data.name;
-                newAwayTeam.img = data.crestUrl;
-                this.setState({
-                    awayTeam: newAwayTeam
-                });
-                return axios.get(`${this.state.links.homeTeam}/`);
-            })
-            .then((response) => {
-                let data = JSON.parse(response.request.responseText);
-                let newHomeTeam = this.state.homeTeam;
-                newHomeTeam.name = data.name;
-                newHomeTeam.img = data.crestUrl;
-                this.setState({
-                    homeTeam: newHomeTeam
-                });
-            })
+                // });
+                // return axios.get(`${links.homeTeam.href}/fixtures`);
+            })})
+            // .then((response) => {
+            //     let fixtures = JSON.parse(response.request.responseText).fixtures;
+            //     // console.log(fixtures);
+            //     let newHomeTeam = this.state.homeTeam;
+            //     newHomeTeam.fixtures = fixtures;
+            //     this.setState({
+            //         homeTeam: newHomeTeam
+            //     });
+            //     return axios.get(`${this.state.links.awayTeam}/fixtures`);
+            // })
+            // .then((response) => {
+            //     let fixtures = JSON.parse(response.request.responseText).fixtures;
+            //     let newAwayTeam = this.state.awayTeam;
+            //     newAwayTeam.fixtures = fixtures;
+            //     this.setState({
+            //         awayTeam: newAwayTeam
+            //     });
+            //     return axios.get(`${this.state.links.awayTeam}/`);
+            // })
+            // .then((response) => {
+            //     let data = JSON.parse(response.request.responseText);
+            //     let newAwayTeam = this.state.awayTeam;
+            //     newAwayTeam.name = data.name;
+            //     newAwayTeam.img = data.crestUrl;
+            //     this.setState({
+            //         awayTeam: newAwayTeam
+            //     });
+            //     return axios.get(`${this.state.links.homeTeam}/`);
+            // })
+            // .then((response) => {
+            //     let data = JSON.parse(response.request.responseText);
+            //     let newHomeTeam = this.state.homeTeam;
+            //     newHomeTeam.name = data.name;
+            //     newHomeTeam.img = data.crestUrl;
+            //     this.setState({
+            //         homeTeam: newHomeTeam
+            //     });
+            // })
     }
 
 
