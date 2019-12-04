@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
 import axios from 'axios';
-import {
-	BrowserRouter as Router,
-	Route,
-	Link
-} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 class Team extends Component {
@@ -43,7 +39,7 @@ class Team extends Component {
 		return (
 			<div className="flex-item" key={match.id}>
 				<Link to={`/predict/${match.id}`}>
-					<div > {homeTeamName}<span className="vs">vs</span> {awayTeamName} </div>
+					<div > {homeTeamName}<span className="vs"> vs </span> {awayTeamName} </div>
 				</Link>
 			</div>
 		)

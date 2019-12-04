@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
 import axios from 'axios';
-import {
-	BrowserRouter as Router,
-	Route,
-	Link
-} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 class Table extends Component {
@@ -36,25 +32,32 @@ class Table extends Component {
 					<h1>English Premier League </h1>
 				</div>
 
-				<div class="heading">
-					<td>Position</td>
-					<td>Team</td>
-					<td>Points</td>
-				</div>
+
 				{/*<ol className="grid-item content">*/}
-				<table class="table">
-					{teams.map((team, index) => {
-						let teamID = team.team.id//team["_links"].team.href.split("/").pop();
-						return (
-							<tr>
-								<Link to={`/team/${teamID}`} key={index}>
-									<td>{team.position}</td>
-									<td>{team.team.name}</td>
-									<td>{team.points}</td>
-								</Link>
-							</tr>
-						)
-					})}
+				<table className="table">
+					<tbody>
+					<tr className="heading">
+						<td>Position</td>
+						<td>Team</td>
+						<td>Points</td>
+					</tr>
+						{teams.map((team, index) => {
+							let teamID = team.team.id//team["_links"].team.href.split("/").pop();
+							return (
+								<tr key={index}>
+									<td><Link to={`/team/${teamID}`} >
+										{team.position}
+									</Link></td>
+									<td><Link to={`/team/${teamID}`}>
+										{team.team.name}
+									</Link></td>
+									<td><Link to={`/team/${teamID}`}>
+										{team.points}
+									</Link></td>
+								</tr>
+							)
+						})}
+					</tbody>
 				</table>
 				{/*					<li class="grid-item">
 					   <a href="#">Тотенхем</a>

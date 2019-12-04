@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
-import logo from './logo.svg';
 import './App.css';
 import Table from './Table.js';
 import Team from './Team.js';
