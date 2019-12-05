@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>test 3 cofs</title>
+  </head>
+  <body>
+    <script>
+      const data = [[30.1, 13.3]];
+      const treeCofsFoo = data => {
+        let [xG, xGa, xGd] = data.map(parseFloat);
+        let cofAndxG, cofAndxGa, cofAndxGd;
+        let resultArr = [];
+
+        for (let cofxG = 1; cofxG < 3; cofxG++) {
+          cofAndxG = xG * cofxG;
+          console.log("cofAndxG:", cofAndxG);
+          for (let cofxGa = 1; cofxGa < 3; cofxGa++) {
+            cofAndxGa = xGa * cofxGa;
+            console.log("cofAndxGa:", cofAndxGa);
+            // for (let cofxGd = 1; cofxGd < 4; cofxGd++) {
+            //   cofAndxGd = xGd * cofxGd;
+            // }
+            parseFloat(((cofAndxG - cofAndxGa) / 1000).toFixed(2));
+          }
+        }
+        // return parseFloat(
+        //   ((cofAndxG - cofAndxGa + cofAndxGd) / 1000).toFixed(2)
+        // );
+      };
+
+      //   for (let d of data) {
+      //     console.log(
+      //       parseFloat(parseFloat(treeCofsFoo(d)).toFixed(2)).toFixed(2)
+      //     );
+      //   }
+    </script>
+  </body>
+</html>
