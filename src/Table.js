@@ -8,7 +8,29 @@ class Table extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			teams: []
+			teams: [],
+			teamIDtoStanding: {
+				8: 57, // Arsenal
+				15: 58, // Aston Villa
+				4 : 61, // Chelsea
+				17: 62, // Everton
+				1: 64, //Liverpool
+				2: 338, //Leicester
+				3: 65, // Man City
+				5: 73, // Spurs
+				6: 76, // Wolves
+				7: 356, // Sheffield Utd
+				9: 66, // Man Utd
+				10: 328, // Burnley
+				11: 354, // Crystal Palace
+				12: 1044, // Bournemouth
+				13: 563, // West Ham
+				14: 67, // Newcastle
+				16: 397, // Brighton
+				18: 340, // Southampton
+				19: 68, // Norwich
+				20: 346, // Watford
+			}
 		}
 	}
 	componentDidMount() {
